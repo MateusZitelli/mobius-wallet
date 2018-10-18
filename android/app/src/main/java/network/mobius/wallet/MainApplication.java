@@ -46,7 +46,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.asList(
           new MainReactPackage(),
           new CodePush(
-              BuildConfig.CODE_PUSH_ANDROID_KEY,
+              "", //BuildConfig.CODE_PUSH_ANDROID_KEY,
               getApplicationContext(),
               getUseDeveloperSupport()
           ),
