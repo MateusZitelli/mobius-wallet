@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import CurrentBalance from 'components/shared/CurrentBalance';
 import BottomButtons from 'components/shared/BottomButtons';
-import FloatingPlusButton from 'components/shared/FloatingPlusButton';
+
 import Balances from './Balances';
 
 import {
@@ -47,7 +47,6 @@ class Dashboard extends Component {
         </Gradient>
 
         <Balances />
-        <FloatingPlusButton navigation={navigation} />
 
         <BottomButtons navigation={navigation} />
       </Container>

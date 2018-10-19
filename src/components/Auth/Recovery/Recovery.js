@@ -78,7 +78,7 @@ class Recovery extends Component {
               key="confirm"
               onPress={this.toggleInfoAlert}
               padding={false}
-              shape="square"
+              square={true}
               title={t('shared.ok').toUpperCase()}
               variant="text"
             />,
@@ -94,7 +94,7 @@ class Recovery extends Component {
               key="confirm"
               onPress={this.hideValidationAlert}
               padding={false}
-              shape="square"
+              square={true}
               title={t('shared.ok').toUpperCase()}
               variant="text"
             />,

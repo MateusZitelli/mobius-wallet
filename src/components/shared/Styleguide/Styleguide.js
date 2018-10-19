@@ -12,13 +12,6 @@ export const colors = {
   darkBlue: '#0E497D',
   darkPurple: '#3A4372',
   error: '#EB506A',
-  growth: '#53eb4f',
-  loss: '#EB506A',
-};
-
-export const gradients = {
-  floatButton: ['#e62ece', '#fd4098'],
-  actionButton: ['#4637E6', '#8C2DFD'],
 };
 
 // It's important to know the exact name of the font to be able to use it
@@ -48,13 +41,8 @@ export const fontSizes = {
   small: 13,
   title: 40,
   smallTitle: 18,
-  floatingButton: 50,
 };
 
 export const radius = {
   button: 20,
-};
-
-export const ui = {
-  floatButtonSize: 90,
 };

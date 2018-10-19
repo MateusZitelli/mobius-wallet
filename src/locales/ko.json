@@ -160,9 +160,6 @@
       "received": "받은",
       "account": "생성 된 계정",
       "headerTitle": "지불"
-    },
-    "currencies": {
-      "searchFieldPlaceholder": "동전 이름"
     }
   }
 }

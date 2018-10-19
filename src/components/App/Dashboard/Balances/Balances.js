@@ -1,41 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { capitalize } from 'lodash';
 
-import { FlatList } from 'react-native';
-import BalanceItem from '../../../shared/BalanceItem/BalanceItem';
+import AmountItem from 'components/shared/AmountItem';
+import { toFixed } from 'utils';
+
+import { Container } from './styles';
 
 class Balances extends Component {
   static propTypes = {
     balances: PropTypes.array,
   };
 
-  genIconUri = id => `https://s2.coinmarketcap.com/static/img/coins/64x64/${id}.png`;
-
   render() {
     const { balances } = this.props;
+
     return (
-      <FlatList
-        data={balances}
-        renderItem={({
-          item: {
-            id, symbol, name, usdBalance, balance, price,
-          },
-        }) => (
-          <BalanceItem
-            key={id}
-            balance={balance}
-            icon={{ uri: this.genIconUri(id) }}
-            price={price}
-            symbol={symbol}
-            title={name}
-            usdBalance={usdBalance}
-          />
-        )}
-      />
-    );
-  }
-}
-/*
       <Container>
         {balances.map(({
           asset, usdPrice, usdAmount, amount,
@@ -50,6 +30,8 @@ class Balances extends Component {
           />
         ))}
       </Container>
- */
+    );
+  }
+}
 
 export default Balances;

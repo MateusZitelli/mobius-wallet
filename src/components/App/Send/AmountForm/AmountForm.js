@@ -96,7 +96,7 @@ class AmountForm extends Component {
                 key="confirm"
                 onPress={this.handleAlertOk}
                 padding={false}
-                shape="square"
+                square={true}
                 title={t('send.amountForm.ok').toUpperCase()}
                 variant="text"
               />,

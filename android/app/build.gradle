@@ -55,7 +55,7 @@ android {
 
         manifestPlaceholders = [
             appName: project.env.get('APP_NAME', '@string/app_name'),
-            fabricApiKey: project.env.get('CRASHLYTICS_API_TOKEN', '5fd7aa253f98d1e119b97640765c42e44dcaeee5')
+            fabricApiKey: project.env.get('CRASHLYTICS_API_TOKEN', '')
         ]
 
         ndk {
