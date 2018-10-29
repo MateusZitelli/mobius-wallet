@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { colors, fonts, fontSizes } from 'components/shared/Styleguide';
 
 import Icon from 'components/shared/Icon';
+import Swipeout from 'react-native-swipeout';
 
 export const Container = styled.View`
   align-items: center;
@@ -18,7 +19,9 @@ export const IconLogotype = styled(Icon)`
   margin-right: 16.5;
 `;
 
-export const Info = styled.View``;
+export const Info = styled.View`
+  margin-left: 10;
+`;
 
 export const Title = styled.Text`
   color: ${colors.textDefault};
@@ -41,6 +44,39 @@ export const AmountInfo = styled.View`
   margin-left: auto;
 `;
 
+export const Price = styled.Text`
+  color: ${colors.textDefault};
+  font-family: ${fonts.roboto.bold};
+  font-size: ${fontSizes.default};
+  line-height: 24;
+`;
+
+export const ChangeInfo = styled.Text`
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+`;
+
+export const Change = styled.Text`
+  color: ${props => (props.positive ? colors.growth : colors.error)};
+  font-family: ${fonts.roboto.regular};
+  font-size: ${fontSizes.small};
+  line-height: 14;
+`;
+
+export const ChangeTime = styled.Text`
+  color: ${colors.textLight};
+  font-family: ${fonts.roboto.regular};
+  font-size: ${fontSizes.small};
+  line-height: 14;
+`;
+
+export const Image = styled.Image`
+  width: ${props => props.size};
+  height: ${props => props.size};
+`;
+
 export const MainAmount = styled.Text`
   color: ${colors.textDefault};
   font-family: ${fonts.roboto.bold};
@@ -48,9 +84,15 @@ export const MainAmount = styled.Text`
   line-height: 24;
 `;
 
-export const SecondartAmount = styled.Text`
+export const SecondaryAmount = styled.Text`
   color: ${colors.textLight};
   font-family: ${fonts.roboto.regular};
   font-size: ${fontSizes.small};
   line-height: 14;
+`;
+
+export const BalanceSwiper = styled(Swipeout).attrs({
+  autoClose: true,
+})`
+  background-color: transparent;
 `;

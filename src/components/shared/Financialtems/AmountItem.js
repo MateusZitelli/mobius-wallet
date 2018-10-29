@@ -9,7 +9,7 @@ import {
   Description,
   AmountInfo,
   MainAmount,
-  SecondartAmount,
+  SecondaryAmount,
 } from './styles';
 
 class AmountItem extends Component {
@@ -20,6 +20,13 @@ class AmountItem extends Component {
     secondaryAmount: PropTypes.string,
     title: PropTypes.string,
   };
+
+  shouldComponentUpdate(nextProps) {
+    return (
+      nextProps.mainAmount !== this.props.mainAmount
+      || nextProps.secondaryAmount !== this.props.secondaryAmount
+    );
+  }
 
   render() {
     const {
@@ -41,7 +48,7 @@ class AmountItem extends Component {
 
         <AmountInfo>
           <MainAmount>{mainAmount}</MainAmount>
-          <SecondartAmount>{secondaryAmount}</SecondartAmount>
+          <SecondaryAmount>{secondaryAmount}</SecondaryAmount>
         </AmountInfo>
       </Container>
     );
